@@ -25,7 +25,7 @@ public class FollowControllerTests {
 
     @Test
     public void testCreateFollow() {
-        Follow follow= new Follow("This is a Test Follow");
+        Follow follow = new Follow("This is a Test Follow");
 
         webTestClient.post().uri("/follow")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
@@ -72,7 +72,7 @@ public class FollowControllerTests {
                 .uri("/follow/{id}", Collections.singletonMap("id", follow.getId()))
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .accept(MediaType.APPLICATION_JSON_UTF8)
-                .body(Mono.just(newTweetData), Follow.class)
+                .body(Mono.just(newFollowData), Follow.class)
                 .exchange()
                 .expectStatus().isOk()
                 .expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)

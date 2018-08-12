@@ -84,7 +84,7 @@ public class UserControllerTests {
 
     @Test
     public void testDeleteUser() {
-       User user = tweetRepository.save(new User("To be deleted")).block();
+       User user = userRepository.save(new User("To be deleted")).block();
 
         webTestClient.delete()
                 .uri("/user/{id}", Collections.singletonMap("id",  user.getId()))
