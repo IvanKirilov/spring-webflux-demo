@@ -23,14 +23,13 @@ public class Tweet {
 
     @NotBlank
     @Size(max = 140)
-    private String text;
+    private String notebook;
 
     @NotNull
     private Date createdAt = new Date();
 
-    public Tweet(String text) {
-        this.id = id;
-        this.text = text;
+    public Tweet(String notebook) {
+        this.notebook = notebook;
     }
 
 }

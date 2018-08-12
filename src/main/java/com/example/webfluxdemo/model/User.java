@@ -22,9 +22,13 @@ public class User {
     private String id;
 
     @NotBlank
-    private String username;
+    private String note;
 
     @NotNull
     private Date createdAt = new Date();
+
+    public User(String note){
+        this.note = note;
+    }
 
 }

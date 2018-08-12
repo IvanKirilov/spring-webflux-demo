@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController extends AbstractController<UserService, User, String> {
 
     @Autowired
-    public UserController(UserService UserService){
-        super(UserService);
+    public UserController(UserService userService){
+        super(userService);
     }
 
 }
